@@ -36,14 +36,14 @@ public class TemperatureTester
         // FINISH ME!
         // use instance method getters
         System.out.println("High temp: " + temp.getHighTemp());
-                System.out.println("Low temp: " + temp.getLowTemp());
-                        System.out.println("Scale: " + temp.getTempScale());
-                                System.out.println("Below freezing? " + temp.belowFreezing());
+        System.out.println("Low temp: " + temp.getLowTemp());
+        System.out.println("Scale: " + temp.getTempScale());
+        System.out.println("Below freezing? " + temp.belowFreezing());
 
-                                        // use static method getters
-                                        System.out.println("Highest tracked temp (F): " +
-                                                System.out.println("Lowest tracked temp (F): " +
-                                                        System.out.println("Ever saw freezing?: " +
-                                                                System.out.println("-----------");
+        // use static method getters
+        System.out.println("Highest tracked temp (F): " + Temperature.getHighestTrackedTempF());
+        System.out.println("Lowest tracked temp (F): " + Temperature.getLowestTrackedTempF());
+        System.out.println("Ever saw freezing?: " + Temperature.sawFreezing());
+        System.out.println("-----------");
     }
 }

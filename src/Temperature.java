@@ -18,24 +18,22 @@ public class Temperature
             tempScale = scale;
             if(!didSetFirstTemps)
             {
-                highestTrackedTempF = 0;
-                lowestTrackedTempF = 0;
+                highestTrackedTempF = high;
+                lowestTrackedTempF = low;
+                didSetFirstTemps = true;
             }
-            else
+            if(scale.equals("C"))
             {
-                if(scale.equals("C"))
-                {
-                    high = Temperature.convertCtoF(high);
-                    low = Temperature.convertCtoF(low);
-                }
-                if(high > highestTrackedTempF)
-                {
-                    highestTrackedTempF = high;
-                }
-                if(low < lowestTrackedTempF)
-                {
-                    lowestTrackedTempF = low;
-                }
+                high = Temperature.convertCtoF(high);
+                low = Temperature.convertCtoF(low);
+            }
+            if(high > highestTrackedTempF)
+            {
+                highestTrackedTempF = high;
+            }
+            if(low < lowestTrackedTempF)
+            {
+                lowestTrackedTempF = low;
             }
         }
         else
